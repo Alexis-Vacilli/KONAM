@@ -8,7 +8,7 @@ import { makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles({
   line: {
-    backgroundColor: 'rgba(0,0,0,.6)',
+    backgroundColor: 'rgba(250,250,250,.6)',
     color: 'rgba(0,0,0,0)',
     width: '25px',
     height: '20px',
@@ -18,6 +18,12 @@ const useStyles = makeStyles({
   list: {
     listStyle: 'none',
     padding: '5px 10px',
+    color: 'white',
+    fontFamily: 'arial',
+    textAlign: 'center',
+    padding: '10px',
+    textDecoration: 'underlined'
+    
   },
 });
 
@@ -28,8 +34,10 @@ export default function RuggedPhones() {
       <Grid
         container
         direction='column'
+        justifyContent='center'
+        alignItems='space-around'
         style={{
-          backgroundColor: 'rgba(0,0,0,.05)',
+          backgroundColor: 'rgb(17,33,45)',
           height: '50vh',
           padding: '30px',
           justifyContent: 'space-between'
@@ -38,22 +46,22 @@ export default function RuggedPhones() {
         {/* Row 1 */}
         <Grid item container>
           <Grid item md={4}>
-            <Typography variant="h5">
-              <span className={classes.line}>l</span>
+            <Typography variant="h5" color="secondary">
+              <span className={classes.line} >l</span>
               Contact Us
             </Typography>
           </Grid>
           <Grid item container md={4} spacing={2} style={{ justifyContent: 'center'}}>
-            <Grid item><FacebookIcon /></Grid>
-            <Grid item><TwitterIcon /></Grid>
-            <Grid item><WhatsAppIcon /></Grid>
+            <Grid item><Typography color="secondary"><FacebookIcon /></Typography></Grid>
+            <Grid item><Typography color="secondary"><TwitterIcon /></Typography></Grid>
+            <Grid item><Typography color="secondary"><WhatsAppIcon /></Typography></Grid>
           </Grid>
           <Grid item md={4}></Grid>
         </Grid>
         {/* Row 2 */}
         <Grid item container>
           <Grid item md={3} xs={0} style={{justifyContent: 'center'}}>
-            <Typography style={{fontWeight: 'bold'}}>PRODUCTS AND SERVICES</Typography>
+            <Typography style={{fontWeight: 'bold', textAlign: 'center'}} color="secondary">PRODUCTS AND SERVICES</Typography>
             <ul className={classes.list}>
               <li>Rugged Phones</li>
               <li>Smart Watches</li>
@@ -61,7 +69,7 @@ export default function RuggedPhones() {
             </ul>
           </Grid>
           <Grid item md={3} xs={0}>
-            <Typography style={{fontWeight: 'bold'}}>ASSISTANCE</Typography>
+            <Typography style={{fontWeight: 'bold', textAlign: 'center'}} color="secondary">ASSISTANCE</Typography>
             <ul className={classes.list}>
               <li>Rugged Phones</li>
               <li>Smart Watches</li>
@@ -69,7 +77,7 @@ export default function RuggedPhones() {
             </ul>
           </Grid>
           <Grid item md={3} xs={0}>
-            <Typography style={{fontWeight: 'bold'}}>ABOUT DOOGEE</Typography>
+            <Typography style={{fontWeight: 'bold', textAlign: 'center'}} color="secondary">ABOUT DOOGEE</Typography>
             <ul className={classes.list}>
               <li>Rugged Phones</li>
               <li>Smart Watches</li>
@@ -77,7 +85,7 @@ export default function RuggedPhones() {
             </ul>
           </Grid>
           <Grid item md={3} xs={0}>
-            <Typography style={{fontWeight: 'bold'}}>BRAND</Typography>
+            <Typography style={{fontWeight: 'bold', textAlign: 'center'}} color="secondary">BRAND</Typography>
             <ul className={classes.list}>
               <li>Rugged Phones</li>
               <li>Smart Watches</li>
@@ -87,7 +95,7 @@ export default function RuggedPhones() {
         </Grid>
         {/* Row 3 */}
         <Grid ite>
-          <Typography style={{ textAlign: 'center' }}>
+          <Typography style={{ textAlign: 'center' }} color="secondary">
             &copy;{new Date().getFullYear} KONAM Ltd | All rights reserved |
             Terms of services
           </Typography>

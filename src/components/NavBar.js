@@ -10,6 +10,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 import Menu from '@material-ui/icons/Menu';
 import { Grid, makeStyles, MenuList } from '@material-ui/core';
+import logo from '../assets/logo1.png';
 
 // Styles
 const useStyles = makeStyles({
@@ -38,7 +39,7 @@ export default function NavBar() {
     <>
       <AppBar className={classes.bar} color='secondary'>
         <Toolbar>
-          <Typography>KONAM</Typography>
+          <img src={logo} alt="logo"/>
           <Grid container>
             <Grid item md={8} style={{ marginLeft: '30px' }}>
               <Tabs

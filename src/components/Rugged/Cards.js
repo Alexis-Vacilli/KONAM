@@ -10,7 +10,8 @@ import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import Avatar from '@material-ui/core/Avatar';
 import MoreVertOutlinedIcon from '@material-ui/icons/MoreVertOutlined';
-import WatchOutlinedIcon from '@material-ui/icons/WatchOutlined';
+import SmartphoneOutlinedIcon from '@material-ui/icons/SmartphoneOutlined';
+
 
 const useStyles = makeStyles({
   bullet: {
@@ -19,10 +20,10 @@ const useStyles = makeStyles({
     transform: 'scale(0.8)',
   },
   avatar: {
-    // backgroundColor: '#57648C'
+    backgroundColor: 'rgb(18, 139, 147)'
   },
   header: {
-    backgroundColor: 'rgba(0,0,0,.9)',
+    backgroundColor: 'rgb(17,33,45)',
     color: '#fff',
     fontWeight: 'bolder'
   },
@@ -41,7 +42,7 @@ const useStyles = makeStyles({
   },
   content: {
       padding: '10 40px',
-      backgroundColor: 'rgba(0,0,0,.9)',
+      backgroundColor: 'rgb(17,33,45)',
       color: '#fff',
       fontWeight: 'bolder',
       fontSize: '20px'
@@ -56,16 +57,16 @@ export default function Cards(props) {
       <CardHeader
         avatar={
           <Avatar aria-label='recipe' className={classes.avatar}>
-            <WatchOutlinedIcon />
+            <SmartphoneOutlinedIcon />
           </Avatar>
         }
         action={
-          <IconButton aria-label='settings' style={{color: '#fff'}}>
+          <IconButton aria-label='settings'>
             <MoreVertOutlinedIcon />
           </IconButton>
         }
         title={title}
-        subheader={price}
+        subheader={<Typography style={{color:"rgb(18, 139, 147)"}}>{price}</Typography>}
         className={classes.header}
       />
       <CardMedia
@@ -77,8 +78,8 @@ export default function Cards(props) {
             {description}
         </Typography>
       </CardContent>
-      <CardActions style={{padding: '20px', backgroundColor: 'rgba(0,0,0,.9)'}}>
-        <Button size='medium' variant="outlined" color="secondary" style={{padding: '5px'}}>Learn More</Button>
+      <CardActions style={{padding: '20px', backgroundColor: 'rgb(17,33,45)'}}>
+          <Button size='medium' variant="outlined" color="secondary" style={{padding: '5px'}}>Learn More</Button>
       </CardActions>
     </Card>
   );

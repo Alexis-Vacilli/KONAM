@@ -11,7 +11,7 @@ const useStyles = makeStyles({
   },
   container: {
     height: '90vh',
-    backgroundColor: '#333',
+    backgroundColor: 'rgb(17,33,45)',
     padding: '100px 100px',
   },
   images: {

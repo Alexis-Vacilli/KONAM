@@ -1,18 +1,13 @@
 import './App.css';
-import NavBar from './components/LandingComponents/NavBar';
-import RuggedPhones from './components/LandingComponents/Rugged/RuggedPhones';
-import SmartWatches from './components/LandingComponents/SmartWatches/SmartWatches';
-import Subscribe from './components/LandingComponents/Subscribe';
-import Footer from './components/LandingComponents/Footer';
-import Slider from './components/LandingComponents/ImageCarousel/Slider';
-import Carousel from './components/LandingComponents/Carousel/Carousel';
-import Grid from '@material-ui/core/Grid';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Home from './pages.js/Home';
+import Details from './pages.js/Details';
 
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: '#000',
+      main: '#11212F',
     },
     secondary: {
       main: '#fff'
@@ -30,26 +25,15 @@ const images = [
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <Grid container direction="column">
-        <Grid item>
-          <NavBar />
-        </Grid>
-        <Grid item>
-          <Carousel />
-        </Grid>
-        <Grid item container style={{padding: '20px', justifyContent: 'center'}}>
-          <Grid item xs={0} sm={2} md={.5}></Grid>
-          <Grid item xs={12} sm={8} md={11}>
-            <RuggedPhones />
-            <SmartWatches/>
-            <Subscribe />
-          </Grid>
-          <Grid item xs={0} sm={2} md={.5}></Grid>
-        </Grid>
-        <Footer /> 
-      </Grid>
-    </ThemeProvider>
+    <BrowserRouter>
+      <ThemeProvider theme={theme}>
+        <Switch>
+          <Route exact path='/' component={Home}/>
+          <Route path='/' component={Details}/>
+        </Switch>
+      </ThemeProvider>
+    </BrowserRouter>
+
   );
 }
 
